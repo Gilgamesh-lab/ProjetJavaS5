@@ -63,6 +63,9 @@ public class Menu {
 					continuer = false;
 					System.out.println("Au revoir :)");
 					break;
+					
+				default :
+					System.out.println("ERREUR! Veuillez saisir un nombre entre 1 et 6.");
 			}
 		}
 			
