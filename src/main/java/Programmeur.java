@@ -20,15 +20,18 @@ public class Programmeur  {
 		this.id = compteurId;
 		compteurId++;
 	}
-
-
 	
-	
+	public Programmeur( String nom, String prenom) {
+		this.id = compteurId;
+		compteurId++;
+		this.nom = nom;
+		this.prenom = prenom;
+	}
 
-
-	public Programmeur(int id, String nom, String prenom, String adresse, String pseudo, String hobby, int naissance,
+    public Programmeur( String nom, String prenom, String adresse, String pseudo, String hobby, int naissance,
 			float prime, float salaire) {
-		this.id = id;
+    	this.id = compteurId;
+		compteurId++;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresse = adresse;

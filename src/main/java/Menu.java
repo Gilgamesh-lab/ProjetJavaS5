@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -10,6 +11,10 @@ public class Menu {
 	
 	
 	public void menu() {
+		
+		ArrayList<Programmeur> programmeurs = new ArrayList<Programmeur>();
+		programmeurs.add(new Programmeur("Test", "Roger"));
+		programmeurs.add(new Programmeur("Cocces", "Ed"));
 		
 		boolean continuer = true;
 		while (continuer) {
@@ -32,6 +37,7 @@ public class Menu {
 			switch(action) {
 				case 1 :
 					System.out.println("choix 1");
+					programmeurs.forEach(System.out::println);
 					break;
 					
 				case 2 :
