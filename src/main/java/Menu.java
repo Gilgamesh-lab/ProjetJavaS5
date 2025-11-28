@@ -13,8 +13,9 @@ public class Menu {
 	public void menu() {
 		
 		ArrayList<Programmeur> programmeurs = new ArrayList<Programmeur>();
-		programmeurs.add(new Programmeur("Test", "test", "6 rue Bernard", "Te", "Macron", "foot", 1986, 500, 2000));
-		programmeurs.add(new Programmeur("Hey", "Salut", "7 rue André", "Hello", "Chef", "Poker", 1986, 500, 2000));
+		programmeurs.add(new Programmeur("Torvalds", "Linus", "2 avenue Linux Git", "linuxroot", "Didier Achvar", "Salsa", 1969, 50.0, 2170.0));
+		programmeurs.add(new Programmeur("Stroustrup", "Bjarne", "294 rue C++", "c++1", "Karim Lahlou", "Voyages", 1950, 80.0, 2466.0));
+		programmeurs.add(new Programmeur("Gosling", "James", "3 bvd JVM", "javapapa", "Jacques Augustin", "Peinture", 1955, 10.0, 1987.0));
 		
 		boolean continuer = true;
 		while (continuer) {
@@ -27,9 +28,7 @@ public class Menu {
 			System.out.println("3. Supprimer un programmeur");
 			System.out.println("4. Ajouter un programmeur");
 			System.out.println("5. Modifier un salaire");
-			System.out.println("6. Afficher la liste des projets (Intitulé, Date de début, Date de fin prévue, Etat, …)");
-			System.out.println("7. Obtenir la liste des programmeurs qui travaillent sur le même projet");
-			System.out.println("8. Quitter");
+			System.out.println("6. Quitter");
 			System.out.println("");
 			System.out.println("");
 			System.out.println("Quel est votre choix ?");
@@ -58,18 +57,9 @@ public class Menu {
 					
 				case 5 :
 					System.out.println("choix 5");
-					break;
-				
+					
 				case 6 :
 					System.out.println("choix 6");
-					break;
-					
-				case 7 :
-					System.out.println("choix 7");
-					break;
-					
-				case 8 :
-					System.out.println("choix 8");
 					continuer = false;
 					System.out.println("Au revoir :)");
 					break;

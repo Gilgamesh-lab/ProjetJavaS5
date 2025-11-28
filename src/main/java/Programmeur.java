@@ -10,8 +10,8 @@ public class Programmeur  {
 	private String responsable;
 	private String hobby;
 	private int naissance;
-	private float prime;
-	private float salaire;
+	private double prime;
+	private double salaire;
 	
 	
 	
@@ -30,7 +30,7 @@ public class Programmeur  {
 	}
 
     public Programmeur( String nom, String prenom, String adresse, String pseudo, String responsable, String hobby, int naissance,
-			float prime, float salaire) {
+			double prime, double salaire) {
     	this.id = compteurId;
 		compteurId++;
 		this.nom = nom;
@@ -175,7 +175,7 @@ public class Programmeur  {
 
 
 
-	public float getPrime() {
+	public double getPrime() {
 		return prime;
 	}
 
@@ -184,7 +184,7 @@ public class Programmeur  {
 
 
 
-	public void setPrime(float prime) {
+	public void setPrime(double prime) {
 		this.prime = prime;
 	}
 
@@ -193,7 +193,7 @@ public class Programmeur  {
 
 
 
-	public float getSalaire() {
+	public double getSalaire() {
 		return salaire;
 	}
 
@@ -202,7 +202,7 @@ public class Programmeur  {
 
 
 
-	public void setSalaire(float salaire) {
+	public void setSalaire(double salaire) {
 		this.salaire = salaire;
 	}
 
