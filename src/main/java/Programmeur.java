@@ -7,6 +7,7 @@ public class Programmeur  {
 	private String prenom;
 	private String adresse;
 	private String pseudo;
+	private String responsable;
 	private String hobby;
 	private int naissance;
 	private float prime;
@@ -28,7 +29,7 @@ public class Programmeur  {
 		this.prenom = prenom;
 	}
 
-    public Programmeur( String nom, String prenom, String adresse, String pseudo, String hobby, int naissance,
+    public Programmeur( String nom, String prenom, String adresse, String pseudo, String responsable, String hobby, int naissance,
 			float prime, float salaire) {
     	this.id = compteurId;
 		compteurId++;
@@ -36,6 +37,7 @@ public class Programmeur  {
 		this.prenom = prenom;
 		this.adresse = adresse;
 		this.pseudo = pseudo;
+		this.responsable = responsable;
 		this.hobby = hobby;
 		this.naissance = naissance;
 		this.prime = prime;
@@ -216,6 +218,14 @@ public class Programmeur  {
 
 
 
+	public String getResponsable() {
+		return responsable;
+	}
+
+	public void setResponsable(String responsable) {
+		this.responsable = responsable;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(adresse, id, naissance, nom, prenom, pseudo);
@@ -238,6 +248,22 @@ public class Programmeur  {
 		return Objects.equals(adresse, other.adresse) && id == other.id && naissance == other.naissance
 				&& Objects.equals(nom, other.nom) && Objects.equals(prenom, other.prenom)
 				&& Objects.equals(pseudo, other.pseudo);
+	}
+	
+	public void afficher() {
+		System.out.println();
+		System.out.println("Id : " + this.id);
+		System.out.println("Nom : " + this.nom);
+		System.out.println("Prénom : " + this.prenom);
+		System.out.println("Adresse : " + this.adresse);
+		System.out.println("Pseudo : " + this.pseudo);
+		System.out.println("Responsable : " + this.responsable);
+		System.out.println("Hobby : " + this.hobby);
+		System.out.println("Naissance : " + this.naissance);
+		System.out.println("Salaire : " + this.naissance);
+		System.out.println("Prime : " + this.prime);
+		System.out.println("-------------------------------------------");
+		System.out.println();
 	}
 
 
