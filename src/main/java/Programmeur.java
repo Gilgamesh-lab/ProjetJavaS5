@@ -22,12 +22,6 @@ public class Programmeur  {
 		compteurId++;
 	}
 	
-	public Programmeur( String nom, String prenom) {
-		this.id = compteurId;
-		compteurId++;
-		this.nom = nom;
-		this.prenom = prenom;
-	}
 
     public Programmeur( String nom, String prenom, String adresse, String pseudo, String responsable, String hobby, int naissance,
 			double prime, double salaire) {
@@ -44,6 +38,19 @@ public class Programmeur  {
 		this.salaire = salaire;
 	}
 
+    public Programmeur(Integer id, String nom, String prenom, String adresse, String pseudo, String responsable, String hobby, Integer naissance,
+    		Integer prime, Integer salaire) {
+    	this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.pseudo = pseudo;
+		this.responsable = responsable;
+		this.hobby = hobby;
+		this.naissance = naissance;
+		this.prime = prime;
+		this.salaire = salaire;
+	}
 
 
 

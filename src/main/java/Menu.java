@@ -1,3 +1,5 @@
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,13 +12,9 @@ public class Menu {
 	}
 	
 	
-	public void menu() {
+	public void menu() throws ClassNotFoundException, SQLException {
 		
-		ArrayList<Programmeur> programmeurs = new ArrayList<Programmeur>();
-		programmeurs.add(new Programmeur("Torvalds", "Linus", "2 avenue Linux Git", "linuxroot", "Didier Achvar", "Salsa", 1969, 50.0, 2170.0));
-		programmeurs.add(new Programmeur("Stroustrup", "Bjarne", "294 rue C++", "c++1", "Karim Lahlou", "Voyages", 1950, 80.0, 2466.0));
-		programmeurs.add(new Programmeur("Gosling", "James", "3 bvd JVM", "javapapa", "Jacques Augustin", "Peinture", 1955, 10.0, 1987.0));
-		
+		ArrayList<Programmeur> programmeurs;
 		boolean continuer = true;
 		while (continuer) {
 			System.out.println("");
@@ -36,10 +34,11 @@ public class Menu {
 
 			Scanner scMenue = new Scanner(System.in);
 			int action = scMenue.nextInt();
-			
+			Connection conn = ActionBDD.startBD();
 			switch(action) {
 				case 1 :
 					System.out.println("choix 1");
+					programmeurs = ActionBDD.recupProgrammeurs(conn);
 					programmeurs.forEach(programmeur -> programmeur.afficher());
 					break;
 					
@@ -62,6 +61,8 @@ public class Menu {
 					System.out.println("choix 6");
 					continuer = false;
 					System.out.println("Au revoir :)");
+					scMenue.close();
+					ActionBDD.fermerConnexion(conn);
 					break;
 					
 				default :
