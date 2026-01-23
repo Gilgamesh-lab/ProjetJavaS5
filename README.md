@@ -8,7 +8,7 @@ Toutes les fonctionnalités demandées dans le cahier des charges ont pu être m
 # Fonctionnalités supplémentaires
 
 En plus des fonctionnalités demandées, quelques fonctionnalités supplémentaires ont été ajoutées afin d’améliorer le fonctionnement de l’application et la gestion des données :
-* ajouterProjet() : permet d’ajouter un nouveau projet en renseignant ses différents attributs (intitulé, dates, état, etc.).
+* ajouterProjet() : permet d’ajouter un nouveau projet en renseignant ses différents attributs (intitulé, dates, état).
 * supprimerProjet() : permet de supprimer un projet à partir de son identifiant.
 * associerProgrammeurProjet() : permet d’associer un programmeur à un projet grâce à leurs identifiants respectifs.
 * retirerProgrammeurProjet() : permet de retirer un programmeur d’un projet grâce à leurs identifiants.
